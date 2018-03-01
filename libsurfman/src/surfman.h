@@ -55,11 +55,7 @@ extern "C"
 # define __log(level, level_string, fmt, ...) \
     surfman_message(level, "%s: " fmt "\n", level_string, ## __VA_ARGS__)
 
-# ifdef NDEBUG
-#  define SURFMAN_DEBUG_PRINT 0
-# else
-#  define SURFMAN_DEBUG_PRINT 1
-#endif
+# define SURFMAN_DEBUG_PRINT 1
 
 # define surfman_debug(fmt, ...) \
     do { \
